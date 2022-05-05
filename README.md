@@ -48,9 +48,13 @@ You can use the AWS console to create the secret details.
    3. On the Store a new secret page, do the following:
    
       a. For Secret type, choose Other type of secret.
+      
       b. For Key/value pairs, in the first field, enter Password. In the second field, enter a password. This will be encrypted when you save the secret.
+      
       c. For Encryption key, keep DefaultEncryptionKey to use the AWS managed key for Secrets Manager. There is no cost for using this key.
+      
       d. Choose Next.
+      
    4. On the Secret name and description page, for Secret name, enter TutorialSecret, and then at the bottom of the page, choose Next.
    5. On the Secret rotation page, keep Disable automatic rotation, and then at the bottom of the page, choose Next.
    6. On the Review page, review the secret details, and then choose Store.
