@@ -123,3 +123,9 @@ ansible-playbook -i hosts main.yml --vault-password-file ./script.sh
 ## Conclusion
 
 In this article, we created ansible vault to encrypt the sensitive field of the application properites and store the ansible vault key in AWS secret manager and retrive the ecryption key using bash script. Please contact me if you have any questions in this section. Thank you!
+
+
+ ### ⚙️ Connect with Me
+<p align="center">
+<a href="https://www.linkedin.com/in/radin-lawrence-8b3270102/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="mailto:radin.lawrence@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
