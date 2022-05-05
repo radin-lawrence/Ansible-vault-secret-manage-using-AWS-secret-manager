@@ -41,7 +41,7 @@ Craete IAM role with secret manager read and write policy added in AWS IAM servi
 
 You can use the AWS console to create the secret details.
 
-**To create a secret**
+**To create a secret(console)**
 
    1. Open the Secrets Manager console at https://console.aws.amazon.com/secretsmanager/.
    2. Under Secrets, choose Store a new secret.
@@ -61,8 +61,34 @@ You can use the AWS console to create the secret details.
 
 Secrets Manager console returns to the list of secrets in your account and the new secret is now in the list.
 
-**To retrieve a secret**
+**To retrieve a secret(console)**
 
    1. Open the Secrets Manager console at https://console.aws.amazon.com/secretsmanager/.
    2. On the Secrets list page, choose TutorialSecret.
    3. On the Secrets details page, in the Secret value section, choose Retrieve secret value.
+
+You can view your secret as a key value pair or on the Plaintext tab as JSON.
+
+
+
+**To create a secret(CLI)**
+
+You can also create secret using CLI, for creating secret from CLI follow these steps:
+
+  1. Create a JSON file (encrypt.json) with encryption key
+     {
+    "ansible_vault_password": "value used for encrypting ansible yml file"
+     }
+  2. Run AWS cli command for generating secret
+     ~~~sh
+     aws secretsmanager create-secret --name ansible/vaultpassword  --description "Secret" --secret-string file://ecncrypt.json --region ap-south-1
+     ~~~
+  3. Result:
+       ```
+       {
+        "VersionId": "d04f008c-48f1-4398-8555-3e8f87b78d0a", 
+        "Name": "ansible/vaultpassword", 
+        "ARN": "arn:aws:secretsmanager:ap-south-1:320070737204:secret:ansible/vaultpassword-38cA1C"
+       }
+       ```
+Don't forget to remove the json file we created after generating the secret.
