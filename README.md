@@ -46,6 +46,7 @@ You can use the AWS console to create the secret details.
    1. Open the Secrets Manager console at https://console.aws.amazon.com/secretsmanager/.
    2. Under Secrets, choose Store a new secret.
    3. On the Store a new secret page, do the following:
+   
       a. For Secret type, choose Other type of secret.
       b. For Key/value pairs, in the first field, enter Password. In the second field, enter a password. This will be encrypted when you save the secret.
       c. For Encryption key, keep DefaultEncryptionKey to use the AWS managed key for Secrets Manager. There is no cost for using this key.
