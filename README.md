@@ -87,12 +87,5 @@ You can also create secret using CLI, for creating secret from CLI follow these 
      aws secretsmanager create-secret --name ansible/vaultpassword  --description "Secret" --secret-string file://encrypt.json --region ap-south-1
 
      ```
-  3. Result:
-       ```
-       {
-        "VersionId": "d04f008c-48f1-4398-8555-3e8f87b78d0a", 
-        "Name": "ansible/vaultpassword", 
-        "ARN": "arn:aws:secretsmanager:ap-south-1:320070737204:secret:ansible/vaultpassword-38cA1C"
-       }
-       ```
-Don't forget to remove the json file we created after generating the secret.
+  
+> note: Don't forget to remove the json file we created after generating the secret.
