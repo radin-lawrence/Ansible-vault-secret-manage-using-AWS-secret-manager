@@ -76,12 +76,12 @@ You can view your secret as a key value pair or on the Plaintext tab as JSON.
 You can also create secret using CLI, for creating secret from CLI follow these steps:
 
   1. Create a JSON file (encrypt.json) with encryption key
-  ```bash
-  # vim encrypt.json
-     {
-    "ansible_vault_password": "<value-used-for-encrypting-ansible-yml-file>"
-     }
-   ```
+     ```bash
+     # vim encrypt.json
+       {
+        "ansible_vault_password": "<value-used-for-encrypting-ansible-yml-file>"
+        }
+      ```
   2. Run AWS cli command for generating secret
      ```bash
      aws secretsmanager create-secret --name ansible/vaultpassword  --description "Secret" --secret-string file://encrypt.json --region ap-south-1
