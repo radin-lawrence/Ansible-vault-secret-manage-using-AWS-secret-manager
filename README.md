@@ -49,7 +49,7 @@ You can use the AWS console to create the secret details.
    
       a. For Secret type, choose Other type of secret.
       
-      b. For Key/value pairs, in the first field, enter Password. In the second field, enter a password. This will be encrypted when you save the secret.
+      b. For Key/value pairs, in the first field(Key), enter Password. In the second field(Value), enter a password. This will be encrypted when you save the secret.
       
       c. For Encryption key, keep DefaultEncryptionKey to use the AWS managed key for Secrets Manager. There is no cost for using this key.
       
@@ -60,3 +60,9 @@ You can use the AWS console to create the secret details.
    6. On the Review page, review the secret details, and then choose Store.
 
 Secrets Manager console returns to the list of secrets in your account and the new secret is now in the list.
+
+**To retrieve a secret**
+
+   1. Open the Secrets Manager console at https://console.aws.amazon.com/secretsmanager/.
+   2. On the Secrets list page, choose TutorialSecret.
+   3. On the Secrets details page, in the Secret value section, choose Retrieve secret value.
