@@ -65,7 +65,7 @@ You can use the AWS console to create the secret details.
    5. On the Secret rotation page, keep Disable automatic rotation, and then at the bottom of the page, choose Next.
    6. On the Review page, review the secret details, and then choose Store.
    
-    ![image](https://user-images.githubusercontent.com/100775027/167004965-09651f56-2f61-465a-97b6-f5320230017f.png)
+      ![image](https://user-images.githubusercontent.com/100775027/167004965-09651f56-2f61-465a-97b6-f5320230017f.png)
 
 Secrets Manager console returns to the list of secrets in your account and the new secret is now in the list.
 
