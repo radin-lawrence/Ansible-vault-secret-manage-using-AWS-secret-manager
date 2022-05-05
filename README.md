@@ -50,22 +50,27 @@ You can use the AWS console to create the secret details.
       a. For Secret type, choose Other type of secret.
       
       b. For Key/value pairs, in the first field(Key), enter Password. In the second field(Value), enter a password. This will be encrypted when you save the secret.
+      ![image](https://user-images.githubusercontent.com/100775027/167005157-2214a316-9fb7-4621-938c-64c869dc29ae.png)
+
       
       c. For Encryption key, keep DefaultEncryptionKey to use the AWS managed key for Secrets Manager. There is no cost for using this key.
       
       d. Choose Next.
       
    4. On the Secret name and description page, for Secret name, enter TutorialSecret, and then at the bottom of the page, choose Next.
+      ![image](https://user-images.githubusercontent.com/100775027/167004764-bfabd6d4-2487-432d-9039-d44f1074191d.png)
    5. On the Secret rotation page, keep Disable automatic rotation, and then at the bottom of the page, choose Next.
    6. On the Review page, review the secret details, and then choose Store.
+![image](https://user-images.githubusercontent.com/100775027/167004965-09651f56-2f61-465a-97b6-f5320230017f.png)
 
 Secrets Manager console returns to the list of secrets in your account and the new secret is now in the list.
 
 **To retrieve a secret(console)**
 
    1. Open the Secrets Manager console at https://console.aws.amazon.com/secretsmanager/.
-   2. On the Secrets list page, choose TutorialSecret.
+   2. On the Secrets list page, choose TutorialSecret
    3. On the Secrets details page, in the Secret value section, choose Retrieve secret value.
+![image](https://user-images.githubusercontent.com/100775027/167004636-03786ae5-fa2c-4763-804e-180c3eb38d52.png)
 
 You can view your secret as a key value pair or on the Plaintext tab as JSON.
 
@@ -87,7 +92,12 @@ You can also create secret using CLI, for creating secret from CLI follow these 
      aws secretsmanager create-secret --name ansible/vaultpassword  --description "Secret" --secret-string file://encrypt.json --region ap-south-1
 
      ```
-  
+     Output willbe like:
+     ![image](https://user-images.githubusercontent.com/100775027/167005747-8308d754-a58a-423f-a978-05209de19af1.png)
+     
+     On portal mumbai region:
+     ![image](https://user-images.githubusercontent.com/100775027/167004508-788e024c-1435-493d-b743-f23e69f3b5fe.png)
+
 > note: Don't forget to remove the json file we created after generating the secret.
 
 ## Retrive the secret created
