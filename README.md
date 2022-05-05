@@ -89,3 +89,37 @@ You can also create secret using CLI, for creating secret from CLI follow these 
      ```
   
 > note: Don't forget to remove the json file we created after generating the secret.
+
+## Retrive the secret created
+
+Here, we use bash script for retiving the secret from secret manager, so that we can use this script file along with the ansible to decrypt the yml file.
+
+
+```bash
+vim script.sh
+```
+
+Add
+
+```
+#!/bin/bash
+
+secret=$(aws secretsmanager get-secret-value --secret-id ansible/vaultpassword --region ap-south-1 --query SecretString --output text |  cut -d: -f2 | tr -d \"})
+echo ${secret}
+
+```
+
+Pass execution permission to the script file (secret.sh)
+```bash
+chmod +x script.sh
+```
+
+## Run the ansible yml file
+
+```bash
+ansible-playbook -i hosts main.yml --vault-password-file ./script.sh
+```
+
+## Conclusion
+
+In this article, we created ansible vault to encrypt the sensitive field of the application properites and store the ansible vault key in AWS secret manager and retrive the ecryption key using bash script. Please contact me if you have any questions in this section. Thank you!
