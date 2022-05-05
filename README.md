@@ -60,7 +60,7 @@ You can use the AWS console to create the secret details.
       
    4. On the Secret name and description page, for Secret name, enter TutorialSecret, and then at the bottom of the page, choose Next.
     
-      ![image](https://user-images.githubusercontent.com/100775027/167004764-bfabd6d4-2487-432d-9039-d44f1074191d.png)
+    ![image](https://user-images.githubusercontent.com/100775027/167004764-bfabd6d4-2487-432d-9039-d44f1074191d.png)
       
    5. On the Secret rotation page, keep Disable automatic rotation, and then at the bottom of the page, choose Next.
    6. On the Review page, review the secret details, and then choose Store.
